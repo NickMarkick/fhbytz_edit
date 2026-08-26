@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Загрузка...</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap">
+
     <style>
-        @font-face {
-            font-family: 'Share Tech Mono';
-            src: url('./resource/fonts/ShareTechMonoRegular_0.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -118,7 +116,7 @@
 // =====================================================================
 // НАСТРОЙКИ
 // =====================================================================
-const USE_RANDOM_BACKGROUNDS = false; // true = фото-фоны за фигурами
+const USE_RANDOM_BACKGROUNDS = true; // фото-фоны за фигурами (файлы в images/backgrounds/)
 
 const BACKGROUNDS = [
     './images/backgrounds/1.jpg',
@@ -130,8 +128,14 @@ const BACKGROUNDS = [
 
 // Треки играют по очереди (каждый по одному разу), затем порядок
 // перемешивается и начинается заново — без повторов подряд.
+// Битых файлов бояться не надо: если файла нет, он молча пропускается.
 const PLAYLIST = [
-    './music/theme.mp3'
+    './music/theme.mp3',   // уже лежит в репо
+    './music/theme1.mp3',
+    './music/theme2.mp3',
+    './music/theme3.mp3',
+    './music/theme4.mp3',
+    './music/theme5.mp3'
 ];
 
 const MUSIC_VOLUME = 0.1;  // громкость 10%
