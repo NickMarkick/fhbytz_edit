@@ -77,11 +77,19 @@
             color: #ffffff;
             letter-spacing: 1px;
         }
+        #bottom-left-image {
+        position: fixed;
+        bottom: 28px;
+        left: 38px;
+        z-index: 3;
+        width: 200px;
+        height: auto;
+        }
     </style>
 </head>
 <body>
 <div id="bg-container"></div>
-
+    <img id="bottom-left-image" src="./images/logo.jpg" alt="">
     <div id="top-left">
         <div class="title">Fazbear's Hunt: Community Edition</div>
         <div class="map-line">карта: <span id="map-name"></span></div>
