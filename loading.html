@@ -88,21 +88,6 @@
         line-height: 1;
         color: #ffffff;
         }
-        #discord-link {
-        position: fixed;
-        bottom: 35px;
-        left: 255px;
-
-        z-index: 3;
-
-        font-family: 'Montserrat', sans-serif;
-        font-size: 24px;
-        font-weight: 600;
-        color: #ffffff;
-        text-decoration: none;
-
-        cursor: pointer;
-        }
 
 #discord-link:hover {
     text-decoration: underline;
@@ -111,12 +96,6 @@
 </head>
 <body>
 <div id="bg-container"></div>
-    <a id="discord-link"
-   href="https://discord.gg/GA8Fd3xZma"
-   onclick="openDiscord(); return false;">
-    Нажми чтобы получить коллекцию!
-    </a>
-    
     <img id="bottom-left-image" src="./images/qrcode.png" alt="">
     
     <div id="top-left">
@@ -222,9 +201,6 @@ function GameDetails(servername, serverurl, mapname, maxplayers) {
     }
 })();
         
-function openDiscord() {
-    window.open('https://discord.gg/GA8Fd3xZma', '_blank');
-}
 // =====================================================================
 // МУЗЫКА: треки по очереди, без повторов
 // =====================================================================
