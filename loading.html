@@ -75,6 +75,12 @@
             color: #ffffff;
             letter-spacing: 1px;
         }
+        #top-left .map-line {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
         #bottom-left-image {
         position: fixed;
         bottom: 28px;
@@ -83,10 +89,21 @@
         width: 200px;
         height: auto;
         }
-        #top-left .title {
-        font-size: 30px;
-        line-height: 1;
-        color: #ffffff;
+
+        /* --- Логотип вместо текста, с медленным покачиванием --- */
+        #logo-image {
+            display: block;
+            max-width: 260px;
+            height: auto;
+            margin-bottom: 14px;
+            transform-origin: 50% 50%;
+            animation: logo-bob 6s ease-in-out infinite;
+        }
+
+        @keyframes logo-bob {
+            0%   { transform: rotate(-10deg); }
+            50%  { transform: rotate(10deg); }
+            100% { transform: rotate(-10deg); }
         }
 
 #discord-link:hover {
@@ -97,9 +114,9 @@
 <body>
 <div id="bg-container"></div>
     <img id="bottom-left-image" src="./images/qrcode.png" alt="">
-    
+
     <div id="top-left">
-        <div class="title">Fazbear's Hunt: Brewed</div>
+        <img id="logo-image" src="./images/logo.png" alt="Fazbear's Hunt: Brewed">
         <div class="map-line">Карта: <span id="map-name"></span></div>
     </div>
 
@@ -200,7 +217,7 @@ function GameDetails(servername, serverurl, mapname, maxplayers) {
         setInterval(next, BG_INTERVAL_MS);
     }
 })();
-        
+
 // =====================================================================
 // МУЗЫКА: треки по очереди, без повторов
 // =====================================================================
